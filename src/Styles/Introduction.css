@@ -1,0 +1,28 @@
+.heading{
+    font-size: 3vmax;
+    font-weight: bold;
+    margin-top: 8vmax;
+}
+
+.intro_text{
+    text-align: justify;
+}
+
+.intro_div{
+    margin: 0 10vmin;
+    text-align:center
+}
+
+@media (max-width: 480px) {
+    .intro_1,.intro_2{
+        height:15vmax;
+        width:30vmax;
+    }
+  }
+
+  @media (min-width: 480px) {
+    .intro_1,.intro_2{
+        height:30vmax;
+        width:60vmax;
+    }
+  }
