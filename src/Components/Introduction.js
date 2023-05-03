@@ -4,7 +4,7 @@ import '../Styles/Introduction.css'
 export default function Introduction() {
   return (
     <div className="intro_div">
-      <p className="heading">Mechanics of Active Polymers and <br/>Additive Manufacturing</p>
+      <p className="heading">Mechanics of Active Polymers-and <br/>Additive Manufacturing</p>
       <p className='intro_text'>Our research focuses on the mechanical and physical behavior of contemporary active polymers that are important to the nation, 
         such as the reprocessible and recyclable plastics, liquid crystal elastomers, and shape-changing polymers. We are interested in 
         understanding and modeling the evolution of material structure and mechanical properties under various environmental stimuli and

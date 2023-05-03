@@ -7,10 +7,6 @@ import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import { Link } from 'react-router-dom';
-// import List from '@mui/material/List';
-// import ListItem from '@mui/material/ListItem';
-// import ListItemButton from '@mui/material/ListItemButton';
-// import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -18,7 +14,7 @@ import Button from '@mui/material/Button';
 import '../Styles/Header1.css'; // import CSS file
 
 const drawerWidth = 240;
-const navItems = ['Introduction','Research','Broader Impacts', 'Publications' ,'Group' ,'Facilities' ,'Teaching'];
+// const navItems = ['Introduction','Research','Broader Impacts', 'Publications' ,'Group' ,'Facilities' ,'Teaching'];
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -42,13 +38,13 @@ function DrawerAppBar(props) {
               </Typography>
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/Research">
               <Typography variant="h6" sx={{ my: 2 }}>
                 Research
               </Typography>
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/BorderImpacts">
               <Typography variant="h6" sx={{ my: 2 }}>
@@ -56,7 +52,7 @@ function DrawerAppBar(props) {
               </Typography>
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/Publications">
               <Typography variant="h6" sx={{ my: 2 }}>
                 Publications
@@ -83,7 +79,7 @@ function DrawerAppBar(props) {
                 Teaching
               </Typography>
             </Link>
-          </li>
+          </li> */}
       </ul>
     </Box>
   );
@@ -93,8 +89,8 @@ function DrawerAppBar(props) {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar component="nav">
-        <Toolbar>
+      <AppBar component="nav"  style={{height:"100px"}}>
+        <Toolbar  style={{height:"100px"}}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -104,12 +100,17 @@ function DrawerAppBar(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } ,marginInlineStart: 'auto'}}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
-                {item}
+          <Box sx={{ display: { xs: 'none', sm: 'block' } ,marginInlineStart: 'auto'}} >
+            <Link to="Introduction">
+              <Button key="Introduction" sx={{ color: '#fff' }} style={{fontSize:"30px",fontWeight:"bolder"}}>
+                Introduction
               </Button>
-            ))}
+            </Link>
+            <Link to="BroaderImpacts">
+              <Button key="BroaderImpacts" sx={{ color: '#fff' }} style={{fontSize:"30px",fontWeight:"bolder"}}>
+                Broader Impacts
+              </Button>
+            </Link>
           </Box>
         </Toolbar>
       </AppBar>
@@ -135,10 +136,6 @@ function DrawerAppBar(props) {
 }
 
 DrawerAppBar.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window: PropTypes.func,
 };
 
