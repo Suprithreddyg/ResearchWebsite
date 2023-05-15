@@ -1,0 +1,13 @@
+
+
+@media (min-width: 769px) {
+    canvas > *{
+        width: 500vmax;
+        height: 50vmax;
+    }
+  }
+
+h1{
+    font-size: larger;
+}
+  

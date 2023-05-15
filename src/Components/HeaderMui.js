@@ -89,8 +89,8 @@ function DrawerAppBar(props) {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar component="nav"  style={{height:"100px"}}>
-        <Toolbar  style={{height:"100px"}}>
+      <AppBar component="nav">
+        <Toolbar>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -101,13 +101,13 @@ function DrawerAppBar(props) {
             <MenuIcon />
           </IconButton>
           <Box sx={{ display: { xs: 'none', sm: 'block' } ,marginInlineStart: 'auto'}} >
-            <Link to="Introduction">
+            {/* <Link to="Introduction">
               <Button key="Introduction" sx={{ color: '#fff' }} style={{fontSize:"30px",fontWeight:"bolder"}}>
                 Introduction
               </Button>
-            </Link>
-            <Link to="BroaderImpacts">
-              <Button key="BroaderImpacts" sx={{ color: '#fff' }} style={{fontSize:"30px",fontWeight:"bolder"}}>
+            </Link> */}
+            <Link to="">
+              <Button key="BroaderImpacts" sx={{ color: '#fff' }}>
                 Broader Impacts
               </Button>
             </Link>
